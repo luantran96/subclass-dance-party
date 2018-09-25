@@ -6,6 +6,7 @@ var SizyDancer = function(top, left, timeBetweenSteps) {
 
   Dancer.call(this,top,left,timeBetweenSteps);
   this.$node = $('<span class="sizyDancer"></span>');
+  this.$node.append('<img class="tina" src="Jimmy.gif"></img>');
   this.setPosition(top, left);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
@@ -16,20 +17,15 @@ var SizyDancer = function(top, left, timeBetweenSteps) {
   SizyDancer.prototype = Object.create(Dancer.prototype);
   SizyDancer.prototype.constructor = SizyDancer;
 
-  SizyDancer.prototype.oldStep = SizyDancer.prototype.step;
-
+  
 
   SizyDancer.prototype.step = function() {
 
-    this.oldStep();
+    Dancer.prototype.step.call(this);
     
-      this.$node.css({'transform' : 'scale(' + this.scaleY + ', ' + this.scaleX + ')'});
-      // this.$node.animate({
-      // transform: scale(this.scaleX, this.scaleY)
-      
-      // },this.timeBetweenSteps);
+    this.$node.css({'transform' : 'scale(' + 0.3 * this.scaleY + ', ' + 0.3 * this.scaleX + ')'});
 
-      this.scaleX += Math.sin(this.angle);
-      this.scaleY += Math.sin(this.angle * 2 / 3);
-      this.angle += Math.PI / 8;
+    this.scaleX += Math.sin(this.angle);
+    this.scaleY += Math.sin(this.angle * 2 / 3);
+    this.angle += Math.PI / 8;
   };

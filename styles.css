@@ -5,17 +5,26 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url('DanceFloor.jpg');
+  background-size: cover;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .LineUp{
-  padding:5px 12px;
-  float:right;
+
+.addDancerButton, .LineUp {
+  padding:5px 2px;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  border: 2px solid;
+  margin: 1px;
 }
 .topbar{
-  height:32px;
+  height:40px;
   background-color: #555;
+  margin: 0px;
 }
 .title{
   background-color: #777;
@@ -27,10 +36,11 @@ body, a:link, a:visited, a:active{
 }
 
 .blinkyDancer{
-  border:10px solid blue;
-  border-radius:5px;
   position:absolute;
+  width: 52px;
+  height: 50px;
 }
+
 
 .sizyDancer{
   width: 20px;
@@ -38,7 +48,7 @@ body, a:link, a:visited, a:active{
   /*border:10px solid blue;
   border-radius:5px;*/
   position:absolute;
-  background-color: blue;
+  
 
 
 }
@@ -47,9 +57,9 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.tina{
-  width: 100px;
-  height: 100px;
-  border: 2px solid pink;
-  background-color: pink;
+img {
+
+  width: 200px;
+  height: 200px;
 }
+
