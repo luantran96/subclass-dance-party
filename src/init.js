@@ -27,7 +27,27 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
        100
     );
+
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+
+
+$('.LineUp').on('click', function(event) {
+
+  var Y = $("body").height() * 0.5;
+  var Xincrement = $("body").width() / window.dancers.length;
+  var X;
+
+  for(var i = 0; window.dancers.length > i ; i++){
+    X = i * Xincrement;
+    //window.dancers[i].setPosition(Y,X);
+
+      window.dancers[i].$node.animate({left:X, top:Y},2000);
+  }
+
+  });
+
 });
 
