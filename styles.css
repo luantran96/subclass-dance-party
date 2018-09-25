@@ -42,3 +42,14 @@ body, a:link, a:visited, a:active{
 
 
 }
+
+.spinnyDancer{
+  position:absolute;
+}
+
+.tina{
+  width: 100px;
+  height: 100px;
+  border: 2px solid pink;
+  background-color: pink;
+}

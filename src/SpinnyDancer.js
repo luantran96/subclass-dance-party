@@ -2,7 +2,8 @@ var SpinnyDancer = function(top, left, timeBetweenSteps) {
   //debugger;
 
   Dancer.call(this,top,left,timeBetweenSteps);
-  this.$node = $('<span class="blinkyDancer"></span>');
+  this.$node = $('<span class="spinnyDancer"></span>');
+  this.$node.append('<img class="tina" src="TinaDancing.gif"></img>');
   this.setPosition(top, left);
   this.degrees = 0;
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -18,7 +19,7 @@ var SpinnyDancer = function(top, left, timeBetweenSteps) {
 
 
   SpinnyDancer.prototype.step = function() {
-    this.oldStep();
+    Dancer.prototype.step.call(this);
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
