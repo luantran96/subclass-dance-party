@@ -5,26 +5,37 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background: url('DanceFloor.jpg');
+  background: url('Kitchen.jpg');
   background-size: cover;
+  min-width:1000px;
 
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: black;
+  text-decoration: none; 
 }
 
 .addDancerButton, .LineUp {
-  padding:5px 2px;
+  padding:10px 0;
   display: inline-block;
-  width: 24%;
+  position: static;
+  width: 24.8%;
+  height:100%;
   text-align: center;
-  border: 2px solid;
-  margin: 1px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.addDancerButton:hover, .LineUp:hover {
+  background-color: coral;
+  opacity: 0.5;
 }
 .topbar{
   height:40px;
-  background-color: #555;
+  background-color: grey;
   margin: 0px;
+  min-width:1000px;
+  white-space: nowrap;
 }
 .title{
   background-color: #777;
@@ -35,7 +46,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.blinkyDancer{
+.JumpyDancer{
   position:absolute;
   width: 52px;
   height: 50px;
@@ -55,6 +66,10 @@ body, a:link, a:visited, a:active{
 
 .spinnyDancer{
   position:absolute;
+}
+
+.tina{
+  cursor: pointer;
 }
 
 img {

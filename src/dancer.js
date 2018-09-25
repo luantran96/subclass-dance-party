@@ -6,6 +6,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
 
   this.step();
+  this.dancingWithPartner = false;
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
@@ -14,34 +15,16 @@ var Dancer = function(top, left, timeBetweenSteps) {
 };
 
   Dancer.prototype.setPosition = function(top, left) {
-    // Use css top and left properties to position our <span> tag
-    // where it belongs on the page. See http://api.jquery.com/css/
-    //
+
     var styleSettings = {
       top: top,
       left: left
     };
 
     this.$node.css(styleSettings);
-  //    this.$node.animate({
-  //   opacity: 0.25,
-  //   left: "+=50",
-  //   height: "toggle"
-  // }, 5000, function() {
-  //   // Animation complete.
-  // });
   };
 
+  Dancer.prototype.step = function() {
 
-  Dancer.prototype.LineUp = function() {
-
-      
-  }
-
-
-    Dancer.prototype.step = function() {
-    // the basic dancer doesn't do anything interesting at all on each step,
-    // it just schedules the next step
-    //var dancer = this;
     setTimeout(() => this.step(), this.timeBetweenSteps);
   };

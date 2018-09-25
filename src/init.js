@@ -23,9 +23,9 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer =  new dancerMakerFunction(
-      $("body").height() * Math.random() * 0.8 + $("body").height() * 0.1,
-      $("body").width() * Math.random() * 0.8 + $("body").width() * 0.1,
-      100
+      $("body").height() * Math.random() * 0.7 + $("body").height() * 0.05,
+      $("body").width() * Math.random() * 0.8 + $("body").width() * 0.05,
+      500
     );
 
     window.dancers.push(dancer);
@@ -44,27 +44,26 @@ $('.LineUp').on('click', function(event) {
 
   for(var i = 0; line1.length > i ; i++){
     X = i * Xincrement;
-    //window.dancers[i].setPosition(Y,X);
+    //window.dancers[i].setPosition(Y, X);
 
-      line1[i].$node.animate({left:X, top:Y- 400},2000);
+      line1[i].$node.animate({left:X, top:Y - 200}, 2000);
+      line1[i].top = Y - 200;
+      line1[i].left = X;
+      line1[i].dancingWithPartner = false;
   }
 
   for(var i = 0; line2.length > i ; i++){
     X = i * Xincrement;
     //window.dancers[i].setPosition(Y,X);
 
-      line2[i].$node.animate({left:X, top:Y + 200},2000);
+      line2[i].$node.animate({left:X, top:Y + 200}, 2000);
+      line2[i].top = Y + 200;
+      line2[i].left = X;
+      line2[i].dancingWithPartner = false;
+      
   }
 
   });
-
-
-
-
-$('span.blinkyDancer').mouseover(function() {
-
-  
-});
 
 
 
