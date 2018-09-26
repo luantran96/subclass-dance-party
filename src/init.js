@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  var music = false;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -65,6 +66,21 @@ $('.LineUp').on('click', function(event) {
 
   });
 
+$('.MusicButton').on('click', function(event) {
+
+  if(!music){
+    $('body').append('<audio autoplay><source src="Song.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>');
+    $('.MusicButton').text('STOP MUSIC');
+    music = true;
+  }else{
+    $('audio').remove();
+    music = false;
+    $('.MusicButton').text('CUE MUSIC');
+  }
+
+ 
+ });
+ 
 
 
 
