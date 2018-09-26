@@ -18,7 +18,8 @@ var JumpyDancer = function(top, left, timeBetweenSteps) {
   JumpyDancer.prototype.step = function() {
 
     Dancer.prototype.step.call(this);
+
     this.$node.animate({top: this.top + 10},this.timeBetweenSteps / 2.5 );
     this.$node.animate({top: this.top - 10},this.timeBetweenSteps / 2.5 );
-    //this.$node.toggle();
+
   };

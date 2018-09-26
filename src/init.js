@@ -45,22 +45,20 @@ $('.LineUp').on('click', function(event) {
 
   for(var i = 0; line1.length > i ; i++){
     X = i * Xincrement;
-    //window.dancers[i].setPosition(Y, X);
 
-      line1[i].$node.animate({left:X, top:Y - 200}, 2000);
-      line1[i].top = Y - 200;
-      line1[i].left = X;
-      line1[i].dancingWithPartner = false;
+    line1[i].$node.animate({left:X, top:Y - 200}, 2000);
+    line1[i].top = Y - 200;
+    line1[i].left = X;
+    line1[i].dancingWithPartner = false;
   }
 
   for(var i = 0; line2.length > i ; i++){
     X = i * Xincrement;
-    //window.dancers[i].setPosition(Y,X);
 
-      line2[i].$node.animate({left:X, top:Y + 200}, 2000);
-      line2[i].top = Y + 200;
-      line2[i].left = X;
-      line2[i].dancingWithPartner = false;
+    line2[i].$node.animate({left:X, top:Y + 200}, 2000);
+    line2[i].top = Y + 200;
+    line2[i].left = X;
+    line2[i].dancingWithPartner = false;
       
   }
 
@@ -81,8 +79,6 @@ $('.MusicButton').on('click', function(event) {
  
  });
  
-
-
 
 });
 

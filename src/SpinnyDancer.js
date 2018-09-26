@@ -44,7 +44,6 @@ var SpinnyDancer = function(top, left, timeBetweenSteps) {
   SpinnyDancer.prototype.step = function() {
     Dancer.prototype.step.call(this);
 
-
     if (this.dancingWithPartner === false) {
 
       this.$node.css({'transform' : 'rotate(' + this.degrees + 'deg)'});
@@ -54,12 +53,11 @@ var SpinnyDancer = function(top, left, timeBetweenSteps) {
     } else {
 
       this.$node.css({'transform' : 'rotate(' + this.degrees + 'deg)'});
-      if(this.degrees > 20){
+      if (this.degrees > 20){
         this.degrees -= 10;
-      }else{
+      } else {
         this.degrees += 10;
       }
-      
 
     }
 

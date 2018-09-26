@@ -25,6 +25,5 @@ var Dancer = function(top, left, timeBetweenSteps) {
   };
 
   Dancer.prototype.step = function() {
-
     setTimeout(() => this.step(), this.timeBetweenSteps);
   };
